@@ -1,3 +1,11 @@
 language: ruby
 rvm:
 - 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: haRmDWR5gv9QQgsEsOdM3Oo79a/GwjxPUhwCMcEirz0MINskWy1MLcVAsAOQuP0u1qiQKaKPWjmWpwVwDZCrg1Htnw6h15JqsS5H8Z8zLFWpQGVevKESkdI2thOg0QMVmwkkB9wiLQnW6Fy6vV+pPJMKw0cw0DiCWEtq8wVVzkA=
+  app: rocky-meadow-6230
+  on:
+    repo: foretell412/sniper
+  run: "rake db:migrate"
